@@ -1,3 +1,9 @@
+Papers
+https://www.sciencedirect.com/science/article/pii/S2213846325001981
+https://iise.secure-platform.com/annual2026/solicitations/102014/sessiongallery/schedule/items/95095/application/16958
+https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2025/89206/1225835
+
+
 Multimodal IoT-Based Agriculture Monitoring Prototype (IISE 2026): https://iise.secure-platform.com/annual2026/solicitations/102014/sessiongallery/schedule/items/95095/application/16958
 Real-time Plant Health Monitoring with High Fidelity Images (GRS 2026): https://www.grad.msstate.edu/sites/www.grad.msstate.edu/files/2026-02/Spring%202026%20Grad%20Symposium%20Program_0.pdf
 PCA Methods for Thermal Images in AM (GRS 2025): https://www.grad.msstate.edu/sites/www.grad.msstate.edu/files/2025-10/Fall%202025%20Grad%20Symposium%20Program.pdf

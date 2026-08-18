@@ -6,10 +6,23 @@
   --text-tertiary: #737373;
   --border-color: #262626;
   --accent: #ffffff;
+  --nav-bg: rgba(10, 10, 10, 0.85);
+  --hover-color: #ffffff;
   
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --max-width: 800px;
+  --max-width: 1200px;
   --transition-speed: 0.3s;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #6b6b6b;
+  --border-color: #e5e5e5;
+  --accent: #5D1725; /* MSU Maroon */
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --hover-color: #5D1725;
 }
 
 * {
@@ -39,7 +52,7 @@ a {
 }
 
 a:hover {
-  color: var(--text-secondary);
+  color: var(--hover-color);
 }
 
 .container {
@@ -52,7 +65,7 @@ a:hover {
 .nav-minimal {
   position: sticky;
   top: 0;
-  background: rgba(10, 10, 10, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid transparent;
   z-index: 100;
@@ -98,7 +111,46 @@ a:hover {
 }
 
 .nav-cv:hover {
+  color: var(--accent);
   border-bottom-color: var(--accent);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-speed) ease;
+  padding: 0 0.5rem;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+[data-theme="light"] .theme-toggle .moon-icon {
+  display: block;
+}
+
+[data-theme="light"] .theme-toggle .sun-icon {
+  display: none;
+}
+
+:root:not([data-theme="light"]) .theme-toggle .moon-icon {
+  display: none;
+}
+
+:root:not([data-theme="light"]) .theme-toggle .sun-icon {
+  display: block;
 }
 
 /* Hero Section */
@@ -162,8 +214,8 @@ a:hover {
 
 .headshot {
   width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  height: 200px;
+  border-radius: 8px;
   object-fit: cover;
   filter: grayscale(20%) contrast(1.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -287,6 +339,47 @@ a:hover {
   text-align: center;
   font-size: 0.85rem;
   color: var(--text-tertiary);
+}
+
+/* Vision Section */
+.vision-intro {
+  margin-bottom: 2rem;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+}
+
+.vision-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform var(--transition-speed) ease, border-color var(--transition-speed) ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.vision-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.vision-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.vision-card h4 {
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 /* Responsive */
